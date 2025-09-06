@@ -9,7 +9,8 @@ A recoil-control app for Rainbow Six Siege.
 - ⚙️ **Config Saving** – Per-operator configs automatically saved and loaded.
 - 🖱️ **Autoclicker** – Choose CPS (Clicks Per Second) and bind any mouse button
 - 🔄 **Auto-Update Check** – On launch, checks GitHub for the latest version and notifies you if an update is available.
-
+- 🛡️ **Completely External** – Does not touch, read, or write the game’s memory it only simulates standard mouse input at the OS level.
+  
 ## 📂 Config Storage
 
 Configs are saved in:
