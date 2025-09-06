@@ -1,3 +1,8 @@
+<video src="example.mp4" controls width="640">
+  Your browser does not support the video tag.  
+  You can <a href="example.mp4">download the video</a> instead.
+</video>
+
 # AllahWare R6
 
 A recoil-control app for Rainbow Six Siege.
@@ -13,15 +18,16 @@ A recoil-control app for Rainbow Six Siege.
   
 ## 📂 Config Storage
 
-Configs are saved in:
-C:\AllahWare\operator_configs
+Configs are saved in:  
+`C:\AllahWare\operator_configs`  
+
 Each operator has its own `.cfg` file storing the recoil values you set in the UI.
 
-🔐 Note
+🔐 **Note**  
+An `.exe` version is also available, built with PyInstaller.  
+If you want to verify the safety of the exe build:  
+You are welcome to upload it to VirusTotal or run it inside tria.ge sandbox.  
 
-An .exe version is also available, built with PyInstaller.
-If you want to verify the safety of the exe build:
-You are welcome to upload it to VirusTotal or run it inside tria.ge sandbox.
 Since this is a personal project, false positives may occur (because of PyInstaller), but you’re free to review the Python source here on GitHub.
 
-@boning on discord if you have any questions or want to report any issues.
+`@boning` on Discord if you have any questions or want to report any issues.
