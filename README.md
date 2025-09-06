@@ -1,7 +1,4 @@
-<video src="example.mp4" controls width="640">
-  Your browser does not support the video tag.  
-  You can <a href="example.mp4">download the video</a> instead.
-</video>
+https://github.com/ttenacityy/AllahWare-R6/raw/refs/heads/main/example.mp4
 
 # AllahWare R6
 
