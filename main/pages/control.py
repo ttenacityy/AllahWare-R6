@@ -1,11 +1,11 @@
 import customtkinter as ctk
 
+
 class ControlPage(ctk.CTkFrame):
     def __init__(self, parent, app):
         super().__init__(parent, fg_color="#111111")
         self.app = app
 
-        # Card container
         card = ctk.CTkFrame(
             self,
             corner_radius=15,
@@ -69,7 +69,11 @@ class ControlPage(ctk.CTkFrame):
     def _on_y_changed(self, value):
         self.y_value.set(f"{value:.3f}")
         self.app.recoil.set_recoil_y(value)
+        if "Operators" in self.app.pages:
+            self.app.pages["Operators"]._save_current_config()
 
     def _on_x_changed(self, value):
         self.x_value.set(f"{value:.3f}")
         self.app.recoil.set_recoil_x(value)
+        if "Operators" in self.app.pages:
+            self.app.pages["Operators"]._save_current_config()
