@@ -12,7 +12,7 @@ from pages.autoclicker import AutoclickerPage
 from pages.tbag import TBagPage
 from pages.settings import SettingsPage
 
-CURRENT_VERSION = "1.0.1"
+CURRENT_VERSION = "1.0.2"
 VERSION_URL = "https://raw.githubusercontent.com/ttenacityy/AllahWare-R6/main/version"
 GITHUB_URL = "https://github.com/ttenacityy/AllahWare-R6/tree/main"
 
