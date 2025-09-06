@@ -1,4 +1,4 @@
-[https://github.com/ttenacityy/AllahWare-R6/raw/refs/heads/main/example.mp4](https://github.com/ttenacityy/AllahWare-R6/issues/1#issue-3389129786)
+https://github.com/ttenacityy/AllahWare-R6/issues/1#issue-3389129786
 
 # AllahWare R6
 
