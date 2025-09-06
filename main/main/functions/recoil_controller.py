@@ -10,9 +10,6 @@ import win32con
 import win32gui
 from pynput.mouse import Button, Listener
 
-
-# ---------------- Mouse Control ----------------
-
 class MouseController:
     def __init__(self):
         self.position = (0, 0)
@@ -22,10 +19,8 @@ class MouseController:
         self.position = win32gui.GetCursorPos()
 
     def move(self, dx: float, dy: float):
-        """Smooth float mouse move (doesn’t interfere with manual input)."""
         win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, int(dx), int(dy))
         self.update_position()
-
 
 class MouseListener:
     def __init__(self, on_click=None, on_move=None):
@@ -56,9 +51,6 @@ class MouseListener:
         if self.on_move_cb:
             self.on_move_cb(x, y)
 
-
-# ---------------- Recoil Controller ----------------
-
 class RecoilController:
     def __init__(self):
         self.mouse = MouseController()
@@ -78,11 +70,9 @@ class RecoilController:
         self._recoil_thread: Optional[threading.Thread] = None
         self.logger = logging.getLogger(__name__)
 
-        # timing settings (like “better” script)
-        self.shoot_delay = 0.01   # interval between corrections
-        self.max_movement = 500   # clamp
+        self.shoot_delay = 0.01   
+        self.max_movement = 500  
 
-    # ---- Public API (what GUI calls) ----
     def start(self):
         if not self.enabled:
             self.enabled = True
@@ -106,7 +96,6 @@ class RecoilController:
             self.base_recoil_y = value
         self.logger.debug(f"[RecoilController] Recoil Y set to {value:.2f}")
 
-    # ---- Internal ----
     def _on_mouse_click(self, x, y, button, pressed):
         if button == Button.left:
             self.lbutton_held = pressed
@@ -135,7 +124,6 @@ class RecoilController:
         self.logger.info("[RecoilController] Recoil loop stopped.")
 
     def _recoil_loop(self):
-        """Smooth correction loop like the better script (no cursor fight)."""
         try:
             shot_count = 0
             while self.enabled and self.lbutton_held and self.rbutton_held:
@@ -158,9 +146,6 @@ class RecoilController:
         finally:
             self.logger.info("[RecoilController] Recoil loop ended.")
 
-
-# ---------------- Standalone Runner ----------------
-
 def run_recoil_controller_standalone():
     logging.basicConfig(
         level=logging.DEBUG,
@@ -178,3 +163,4 @@ def run_recoil_controller_standalone():
 
 if __name__ == "__main__":
     run_recoil_controller_standalone()
+
