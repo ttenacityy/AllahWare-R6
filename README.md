@@ -1,6 +1,6 @@
 # AllahWare R6
 
-A recoil-control app for Rainbow Six Siege.
+A recoil control overlay toggled with right-shift
 
 ## ⚡ Core Features
 
