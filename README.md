@@ -1,7 +1,5 @@
 # AllahWare R6
 
-https://github.com/user-attachments/assets/b383ae74-044c-48ca-958c-1f3a1d38e6a0
-
 A recoil-control app for Rainbow Six Siege.
 
 ## ⚡ Core Features
