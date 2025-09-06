@@ -22,3 +22,5 @@ An .exe version is also available, built with PyInstaller.
 If you want to verify the safety of the exe build:
 You are welcome to upload it to VirusTotal or run it inside tria.ge sandbox.
 Since this is a personal project, false positives may occur (because of PyInstaller), but you’re free to review the Python source here on GitHub.
+
+@boning on discord if you have any questions or want to report any issues.
